@@ -1,0 +1,32 @@
+int itemCount = 0;
+String[] itemName = new String [200];
+int[] itemQuantities = new int[200];
+double[] itemPrices= new double [20];
+public void AddRR (String name, int quantity, duoble price) {
+itemNames [itemCount] = name;
+itemQuantities [itemCount] = quantity;
+itemPrices [itemCount] = price;
+itemCount++;
+}
+
+public void updaterrquantity(String name , int newQuantity) {
+int rr= -1 ;
+for (int i = 0 ; i < itemCount; i ++){
+if (itemNames [i].equals(name)) {
+index= i;
+break;
+}
+}
+if (index != -1){
+itemQuantities{index} = newQuantity;
+}
+else {
+System.out.println("Item not found .");
+}
+}
+public void print (){
+System.out.println("Current:");
+for (int i =0; i<  itemCount; i++){
+System.out.println(itemNames[i]+":"+itemQuantities[i]"@ $" itemPrices[i]);
+}
+}
