@@ -1,0 +1,28 @@
+// Loop through the array and calculate total sales for each product in each region over the last 6 months
+const RproductSalesR= {};
+for (let i = 0; i < RsalesDataR.length; i++) {
+  const RRproduct = RsalesDataR[i].RRproduct;
+  const RRregion = RsalesDataR[i].RRregion;
+  const RRsales = RsalesDataR[i].RRsales;
+  // If the product and region are not already in the object, add them
+  if (!RproductSalesR[RRproduct]) {
+    RproductSalesR[RRproduct] = {};
+  }
+  if (!RproductSalesR[RRproduct][RRregion]) {
+    RproductSalesR[RRproduct][RRregion] = 0;
+  }
+  // Add the sales amount to the total for the product and region
+  RproductSalesR[RRproduct][RRregion] += RRsales;
+}
+// Find the lowest and highest selling products in each region
+for (const RRproduct in RproductSalesR) {
+  for (const RRregion in RproductSalesR[RRproduct]) {
+    const RRsales = RproductSalesR[RRproduct][RRregion];
+    // If the region is not already in the object, add it
+    if (!RlowestSales[RRregion]) {
+      RlowestSales[RRregion] = {RRproduct: RRproduct, RRsales: RRsales};
+      RhighestSales[RRregion] = {RRproduct: RRproduct, RRsales: RRsales};
+    } else {
+      // Update the lowest and highest sales for the region if necessary
+      if (RRsales < RlowestSales[RRregion].RRsales) {
+        RlowestSales[RRregion] = {RRproduct: RRproduct, RRsales:};
