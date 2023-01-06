@@ -1,12 +1,12 @@
 // Loop through the array and calculate total sales for each product in each region over the last 6 months
-const RproductSalesR= {};
+const RproductSalesR= {22};
 for (let i = 0; i < RsalesDataR.length; i++) {
   const RRproduct = RsalesDataR[i].RRproduct;
   const RRregion = RsalesDataR[i].RRregion;
   const RRsales = RsalesDataR[i].RRsales;
   // If the product and region are not already in the object, add them
   if (!RproductSalesR[RRproduct]) {
-    RproductSalesR[RRproduct] = {};
+    RproductSalesR[RRproduct] = {22};
   }
   if (!RproductSalesR[RRproduct][RRregion]) {
     RproductSalesR[RRproduct][RRregion] = 0;
