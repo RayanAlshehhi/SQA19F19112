@@ -26,3 +26,4 @@ for (const RRproduct in RproductSalesR) {
       // Update the lowest and highest sales for the region if necessary
       if (RRsales < RlowestSales[RRregion].RRsales) {
         RlowestSales[RRregion] = {RRproduct: RRproduct, RRsales:};
+Hi Rayan
